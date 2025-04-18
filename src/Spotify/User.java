@@ -44,12 +44,29 @@ public class User {
         return behavior;
     }
 
+
     public void setBehavior(UserBehavior behavior){
         this.behavior = behavior;
     }
 
+
     public ArrayList<Playlist> getPlaylists(){
         return playlists;
+    }
+
+
+    public ArrayList<User> getFollowerList(){
+        return followerList;
+    }
+
+
+    public ArrayList<User> getFollowingList(){
+        return followingList;
+    }
+
+
+    public ArrayList<User> getAllUsers(){
+        return allUsers;
     }
 
 
@@ -58,13 +75,16 @@ public class User {
         user.followerList.add(this);
     }
 
+
    public void createPlaylist (String Title){
         this.behavior.createPlaylist(Title, this);
     }
 
+
     public void playMusic (Music music){
         this.behavior.playMusic(music);
     }
+
 
     public  void buyPremium (User owner, int month){
         this.behavior.buyPremium(owner, month);

@@ -22,6 +22,7 @@ public class Music {
        return singer;
    }
 
+
    public void play(){
        System.out.println("music title: " + this.title + "song singer: " + this.singer.getUsername() + "playing now");
       this.numberOfStream++;
@@ -48,5 +49,4 @@ public class Music {
        }
        return null;
    }
-
 }

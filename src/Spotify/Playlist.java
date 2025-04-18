@@ -96,7 +96,4 @@ public class Playlist {
         }
         System.out.println("playlist finished");
     }
-
-
-
 }
