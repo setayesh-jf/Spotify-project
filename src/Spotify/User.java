@@ -11,7 +11,7 @@ public class User {
     private static ArrayList<User> allUsers = new ArrayList<>();
 
 
-    public User(String username, String password, UserBehavior behavior) throws InvalidOperationException{
+    public User(String username, String password) throws InvalidOperationException{
 
         for (User user : allUsers){
             if (user.getUsername().equals(username)){
@@ -58,8 +58,8 @@ public class User {
         user.followerList.add(this);
     }
 
-    public void createPlaylist (String Title, User Owner){
-        this.behavior.createPlaylist(Title, Owner);
+   public void createPlaylist (String Title){
+        this.behavior.createPlaylist(Title, this);
     }
 
     public void playMusic (Music music){

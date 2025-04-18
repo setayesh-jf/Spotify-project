@@ -8,10 +8,15 @@ public class PremiumBehavior implements UserBehavior{
     }
 
 
+    public int getMonth(){
+        return month;
+    }
+
+
     @Override
     public void createPlaylist (String Title, User Owner){
-        Playlist playList = new Playlist(Title, Owner);
-        Owner.getPlaylists().playlists.add(playList);
+        Playlist playList = new Playlist(Owner, Title);
+        Owner.getPlaylists().add(playList);
 
     }
 
