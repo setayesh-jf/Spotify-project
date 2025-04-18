@@ -48,6 +48,10 @@ public class User {
         this.behavior = behavior;
     }
 
+    public ArrayList<Playlist> getPlaylists(){
+        return playlists;
+    }
+
 
     public void follow (User user){
        this.followingList.add(user);
